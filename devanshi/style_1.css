@@ -1,0 +1,56 @@
+body {
+    width: 85%;
+    margin: 0 8%;
+    background: #ffffff url("bg.jpg") repeat-y right top;
+    color: #f9f9f9;
+}
+nav {
+    padding: 24px;
+    text-align: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+#navmenu {
+    background: #EEA200;
+}
+.link-3 {
+    transition: 0.4s;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+.link-3:hover {
+    background-color: #ffffff;
+    color: #EEA200;
+    padding: 24px 10px;
+}
+#div {
+    width: 410px;
+    height: 43px;
+    background: #ffffff url("bg.jpg") repeat-y right top;
+    position: relative;
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 4s;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    font-size: 30px;
+    animation-iteration-count: infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    100% {background-color:red; left:700px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    100% {background-color:red; left:700px; top:0px;}
+}
+.img {
+    width: 17%;
+    height: auto;
+}

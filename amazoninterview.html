@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+     function yash(inW, inH, maxW, maxH){
+        if (inW < maxW && inH<maxH) {
+            return [inW,inH];
+        }
+       var scaleW = maxW / inW;
+        var scaleH = maxH / inH;
+
+        if (scaleW < scaleH) {
+            newH = Math.round(scaleW * inH);
+            return [maxW,newH];
+        }
+        else {
+            newW = Math.round(scaleH * inW);
+            return [newW, maxH];
+        }
+
+        console.log(scaleW);
+        console.log(scaleH);
+    }
+
+    yash(250,250,150,150)()
+</script>
+
+</body>
+</html>

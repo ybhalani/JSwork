@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    #slideshow {
+        position:relative;
+        height:350px;
+    }
+
+    #slideshow IMG {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:8;
+    }
+
+    #slideshow IMG.active {
+        z-index:10;
+    }
+
+    #slideshow IMG.last-active {
+        z-index:9;
+    }
+    img {
+        height: 400px;
+        width: 400px;
+    }
+    h1 {
+        color: #0000FF;
+    }
+</style>
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+
+</head>
+
+<body>
+<h1>birds slide Show</h1>
+<h2>Wild birds</h2>
+
+<div id="slideshow">
+    <img src="aliimg/bird_1.jpg" alt="" class="active" />
+    <img src="aliimg/bird_2.jpg" alt="" />
+    <img src="aliimg/bird_3.jpg" alt="" />
+    <img src="aliimg/bird_4.jpg" alt="" />
+    <img src="aliimg/bird_5.jpg" alt="" />
+    <img src="aliimg/bird_6.jpg" alt="" />
+    <img src="aliimg/bird_7.jpg" alt="" />
+    <img src="aliimg/bird_8.jpg" alt="" />
+    <img src="aliimg/bird_9.jpg" alt="" />
+    <img src="aliimg/bird_10.jpg" alt="" />
+</div>
+<script>
+    function slideSwitch() {
+        var $active = $('#slideshow IMG.active');
+        var $next = $active.next();
+
+        $next.addClass('active');
+
+        $active.removeClass('active');
+    }
+
+    $(function() {
+        setInterval( "slideSwitch()", 2000 );
+    });
+</script>
+
+</body>
+</html>

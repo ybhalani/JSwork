@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <style>
+        .gallery-wrap { margin: 0 auto; overflow: hidden; width: 732px; }
+        .gallery { position: relative; left: 0; top: 0; }
+        .gallery__item { float: left; list-style: none; margin-right: 20px; }
+        .gallery__img { display: block; border: 4px solid #40331b; height: 175px; width: 160px; }
+
+        .gallery__controls { margin-top: 10px; }
+        .gallery__controls-prev { cursor: pointer; float: left; }
+        .gallery__controls-next { cursor: pointer; float: right; }
+    </style>
+</head>
+<body>
+<div class="gallery-wrap">
+    <div class="gallery clearfix">
+        <div class="gallery__item">
+            <img src="aliimg/bird_1.jpg" class="gallery__img" alt="" />
+        </div>
+        <div class="gallery__item">
+            <img src="aliimg/bird_2.jpg" class="gallery__img" alt="" />
+        </div>
+        <div class="gallery__item">
+            <img src="aliimg/bird_3.jpg" class="gallery__img" alt="" />
+        </div>
+        <div class="gallery__item">
+            <img src="aliimg/bird_4.jpg" class="gallery__img" alt="" />
+        </div>
+        <div class="gallery__item">
+            <img src="aliimg/bird_5.jpg" class="gallery__img" alt="" />
+        </div>
+        <div class="gallery__item">
+            <img src="aliimg/bird_6.jpg" class="gallery__img" alt="" />
+        </div>
+        <div class="gallery__item">
+            <img src="aliimg/bird_7.jpg" class="gallery__img" alt="" />
+        </div>
+        <div class="gallery__item">
+            <img src="aliimg/bird_8.jpg" class="gallery__img" alt="" />
+        </div>
+        <div class="gallery__item">
+            <img src="aliimg/bird_9.jpg" class="gallery__img" alt="" />
+        </div>
+        <div class="gallery__item">
+            <img src="aliimg/bird_10.jpg" class="gallery__img" alt="" />
+        </div>
+
+    </div>
+    <div class="gallery__controls clearfix">
+        <div href="#" class="gallery__controls-prev">
+            <img src="aliimg/prev.png" alt="" />
+        </div>
+        <div href="#" class="gallery__controls-next">
+            <img src="aliimg/next.png" alt="" />
+        </div>
+    </div>
+</div>
+
+<img src="aliimg/bird_1.jpg" alt="" class="active" />
+<img src="aliimg/bird_2.jpg" alt="" />
+<img src="aliimg/bird_3.jpg" alt="" />
+<img src="aliimg/bird_4.jpg" alt="" />
+<img src="aliimg/bird_5.jpg" alt="" />
+<img src="aliimg/bird_6.jpg" alt="" />
+<img src="aliimg/bird_7.jpg" alt="" />
+<img src="aliimg/bird_8.jpg" alt="" />
+<img src="aliimg/bird_9.jpg" alt="" />
+<img src="aliimg/bird_10.jpg" alt="" />
+
+<script>
+    $(window).load(function(){
+
+        $(".gallery__link").fancybox({
+            'titleShow'     : false,
+            'transitionIn'  : 'elastic',
+            'transitionOut' : 'elastic'
+        });
+
+        var totalWidth = 0;
+
+        $(".gallery__item").each(function(){
+            totalWidth = totalWidth + $(this).outerWidth(true);
+        });
+
+        var maxScrollPosition = totalWidth - $(".gallery-wrap").outerWidth();
+
+        function toGalleryItem($targetItem){
+            if($targetItem.length){
+
+                var newPosition = $targetItem.position().left;
+
+                if(newPosition <= maxScrollPosition){
+
+                    $targetItem.addClass("gallery__item--active");
+
+                    $targetItem.siblings().removeClass("gallery__item--active");
+
+                    $(".gallery").animate({
+                        left : - newPosition
+                    });
+                } else {
+                    $(".gallery").animate({
+                        left : - maxScrollPosition
+                    });
+                };
+            };
+        };
+
+        $(".gallery").width(totalWidth);
+
+        $(".gallery__item:first").addClass("gallery__item--active");
+
+        $(".gallery__controls-prev").click(function(){
+            var $targetItem = $(".gallery__item--active").prev();
+            toGalleryItem($targetItem);
+        });
+
+        $(".gallery__controls-next").click(function(){
+            var $targetItem = $(".gallery__item--active").next();
+            toGalleryItem($targetItem);
+        });
+    });
+
+</script>
+</body>
+</html>
