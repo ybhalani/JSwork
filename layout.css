@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    background: url("bg.jpg") repeat;
+    background-size: contain;
+}
+h1{
+    height: 53px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #000;
+    margin: 0;
+    color: #fff;
+    padding: 0.3em;
+    border-radius: 30px 30px 0 0;
+}
+#page2 {
+    height:auto;
+    width:100%;
+}
+.mainbig{
+    width: 100%;
+    height: 650px;
+}
+.firstclm {
+    width: 30%;
+    float: left;
+    margin: 1em;
+}
+.secondclm{
+    width: 30%;
+    float: left;
+    margin: 1em;
+}
+.thirdclm{
+    width: 30%;
+
+    margin: 1em;
+    float: left;
+}
+.thirdfirst{
+    height: 623px;
+    width: 100%;
+    float: left;
+    border: 0px solid #ffffff;
+    border-radius: 30px;
+    margin: 7px;
+    background-color: #ffffff;
+    opacity: 0.6;
+
+}
+.firstfirst{
+    height: 300px;
+    width: 100%;
+    float: left;
+    border: 0px solid #ffffff;
+    border-radius: 30px;
+    margin: 7px;
+    background-color: #ffffff;
+    opacity: 0.6;
+
+}
+.firstsecond{
+    height: 300px;
+    width: 100%;
+    float: left;
+    border: 0px solid #ffffff;
+    border-radius: 30px;
+    margin: 7px;
+    background-color: #ffffff;
+    opacity: 0.6;
+
+}
+
+
+.secondfirst{
+    height: 450px;
+    width: 100%;
+    float: left;
+    border: 0px solid #ffffff;
+    border-radius: 30px;
+    margin: 7px;
+    background-color: #ffffff;
+    opacity: 0.6;
+
+}
+.secondsecond{
+    height: 150px;
+    width: 100%;
+    float: left;
+    border: 0px solid #ffffff;
+    border-radius: 30px;
+    margin: 7px;
+    background-color: #ffffff;
+    opacity: 0.6;
+}
+.rotate img {
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+.rotate img:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.zoom img{
+    float: left;
+    margin:50px;
+    height:80px;
+    width:80px;
+    -moz-transition:-moz-transform 0.5s ease-in;
+    -webkit-transition:-webkit-transform 0.5s ease-in;
+    -o-transition:-o-transform 0.5s ease-in;
+}
+.zoom img:hover{
+    -moz-transform:scale(2);
+    -webkit-transform:scale(2);
+    -o-transform:scale(2);
+}
+.slowzoom{
+    float: left;
+    height:30px;
+    width:30px;
+    background: url("1.png") no-repeat;
+    background-size: contain;
+    -webkit-transition-property: width; /* Safari */
+    -webkit-transition-duration: 5s; /* Safari */
+    transition-property: width;
+    transition-duration: 5s;
+}
+.slowzoom:hover{
+    height:90px;
+    width:90px;
+}
+.slowheight{
+    width: 320px;
+    height: 200px;
+    background-color: #ED8029;
+    border-radius: 5px;
+
+}

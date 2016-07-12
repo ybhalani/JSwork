@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Menu Exercise</title>
+    <style>
+        .menu1{
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .submenu1 {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .submenu1 a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .submenu1 a:hover {background-color: #f1f1f1}
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown:hover .submenu1 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="dropdown">
+    <ul><li class="menu1"><h3>Dropdown</h3>
+    <div class="submenu1">
+        <a href="#">Dropdown 1</a>
+        <a href="#">Dropdown 2</a>
+        <a href="#">Dropdown 3</a>
+    </div>
+    </li>
+    </ul>
+</div>
+</body>
+</html>

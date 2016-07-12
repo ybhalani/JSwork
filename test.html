@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chair Test</title>
+<script>
+    var FindLastChair = function(totalchairs, skiped) {
+        skiped++;
+        if (totalchairs === 1)
+            return 1;
+        else
+            return ((FindLastChair(totalchairs - 1, skiped) + skiped - 1) % totalchairs) + 1;
+    };
+
+    var Final = FindLastChair(100, 0);
+    document.write('The survivor is sitting in the chair #:', Final);
+</script>
+</head>
+<body>
+
+</body>
+</html>

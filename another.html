@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Menu Exercise</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #0f0f0f;
+        }
+        li{
+            list-style: none;
+        }
+        ul.mainProductMenu {
+            display: none;
+        }
+        ul.mainSupportMenu{
+            display: none;
+        }
+        li.lounchProductMenu{
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            position: relative;
+        }
+        li.launchSupportMenu{
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            position: relative;
+        }
+        .lounchProductMenu:hover .mainProductMenu{
+            display: block;
+            position: absolute;
+            width: 250px;
+            border: 1px solid #0f0f0f;
+        }
+        .launchSupportMenu:hover .mainSupportMenu{
+            display: block;
+            position: absolute;
+            width:260px;
+            border: 1px solid #0f0f0f;
+        }
+        .inset-text {
+            /* Shadows are visible under slightly transparent text color */
+            color: rgba(10,60,150, 0.8);
+            text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+        }
+        h1 {
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            font-size: 6em;
+            line-height: 1em;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function placeOrder(orderNumber){
+        console.log("Order Number of a Customer :: ",orderNumber);
+
+
+        deliverFood(function(){
+            console.log("Food Delivered of Order Number :: ", orderNumber);
+        });
+    }
+
+    function deliverFood(callback){
+
+        setTimeout(callback,5000);
+    }
+
+    placeOrder(1);
+    placeOrder(2);
+    placeOrder(3);
+    placeOrder(4);
+    placeOrder(5);
+</script>
+<div class="mainDiv">
+
+    <h1 class="inset-text">YASH BHALANI</h1>
+    <ul class="dropdownMenu1">
+
+        <!--Product Menu-->
+        <li class="lounchProductMenu"><a href="#">Product</a>
+            <ul class="mainProductMenu">
+                <li class="productItem"><a href="#">Product 1</a>
+                    <ul class="dropdownMenu4">
+                        <li><a href="#">Sub Product for Product 1</a></li>
+                        <li><a href="#">Sub Product for Product 1</a></li>
+                        <li><a href="#">Sub Product for Product 1</a></li>
+                    </ul>
+                </li>
+                <li class="productItem"><a href="#">Product 2</a>
+                    <ul class="dropdownMenu4">
+                        <li><a href="#">Sub Product for Product 2</a></li>
+                        <li><a href="#">Sub Product for Product 2</a></li>
+                        <li><a href="#">Sub Product for Product 2</a></li>
+                    </ul>
+                </li>
+                <li class="productItem"><a href="#">Product 3</a>
+                    <ul class="dropdownMenu4">
+                        <li><a href="#">Sub Product for Product 3</a></li>
+                        <li><a href="#">Sub Product for Product 3</a></li>
+                        <li><a href="#">Sub Product for Product 3</a></li>
+                        <li><a href="#">Sub Product for Product 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <!--Support Menu-->
+        <li id="list2" class="launchSupportMenu"><a href="#">Support</a>
+            <ul class="mainSupportMenu">
+                <li><a href="#">Product 1 Support</a>
+                    <ul class="dropdownMenu4">
+                        <li><a href="#">Support for Sub Product 1</a></li>
+                        <li><a href="#">Support for Sub Product 1</a></li>
+                        <li><a href="#">Support for Sub Product 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Product 2 Support</a>
+                    <ul class="dropdownMenu4">
+                        <li><a href="#">Support for Sub Product 2</a></li>
+                        <li><a href="#">Support for Sub Product 2</a></li>
+                        <li><a href="#">Support for Sub Product 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Product 3 Support</a>
+                    <ul class="dropdownMenu4">
+                        <li><a href="#">Support for Sub Product 2</a></li>
+                        <li><a href="#">Support for Sub Product 2</a></li>
+                        <li><a href="#">Support for Sub Product 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+</body>
+</html>

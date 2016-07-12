@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var request = require("request"),
+            cheerio = require("cheerio"),
+            mysql = require('mysql'),
+            async = require('async');
+    var urls =['www.google.com' , 'www.twitter.com' , 'www.facebook.com' , 'www.cnn.com']
+    async.eachSeries(Urls, function (url, next) {
+        carlistrequest(url, function (err, response, body) {
+            var $ = cheerio.load(body);
+            var data = {
+                name: $(body).find('.sub').text()
+            }
+            console.log(data);
+            next(); // <<<<<<<<<<<<
+        })
+    }, function (callback) {
+        console.log('All Url Done');
+    });
+</script>
+</body>
+</html>

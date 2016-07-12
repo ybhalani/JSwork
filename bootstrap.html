@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>It's a bug!</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+<div class="container">
+    <h1>We love bootstrap!</h1>
+
+    <p>If you click the button below, you should see a bootstrap <code>.alert</code></p>
+
+
+
+    <form>
+        <div class="alert alert-danger" style="display: none;" role="alert">
+            <p>We alerted the user! But only for 3 seconds :-)</p>
+        </div>
+        <button id="alert_btn" class="btn btn-primary">Alert me!</button>
+    </form>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script>
+    $('#alert_btn').click(function () {
+        $('.alert').fadeIn();
+        window.setTimeout(function() { $('.alert').fadeOut(1000); }, 3000);
+        $('.alert').css({"display": "block",
+            "color": "#a94442",
+        "background-color": "#f2dede",
+        "border-color": "#ebccd1"});
+    });
+</script>
+</body>
+</html>

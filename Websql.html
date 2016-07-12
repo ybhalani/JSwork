@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercises for Web SQL</title>
+    <script type="text/javascript" src="js/websql.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/websql.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    <style type="text/css">
+
+        input[type="checkbox"]:required:invalid + .greenorred { color: red; }
+        input[type="checkbox"]:required:valid + .greenorred { color: green; }
+
+
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+    <h3><img src="images/icon.png" alt="Registration Form" style="width:70px;height:70px;">Please fill out this form below to begin downloading.</h3>
+<div class="breakline"></div>
+<div class="form" method="post">
+    <div class="first_part row">
+        <fieldset class="lf">
+        <lable class="textlable">First Name:* </lable><input type="text" id="firstname" class="textbox" autofocus required/>
+        <lable class="textlable">Last Name:* </lable><input type="text" id="lastname" class="textbox" autofocus required/>
+        <lable class="textlable">Email:* </lable><input type="email" id="email" class="textbox" autofocus required/>
+        <lable class="textlable">Password:* </lable><input type="password" id="password" class="textbox" autofocus required/>
+        </fieldset>
+        <fieldset class="rf">
+            <lable class="textlable">Company:* </lable><input type="text" id="company" class="textbox" autofocus required/>
+            <lable class="textlable">Website:* </lable><input type="url" id="website" class="textbox" autofocus required/>
+            <lable class="textlable">Position:</lable>
+            <select  id="position" class="form-control" required>
+                <option value="">--Select one</option>
+                <option name="1" value="1">1</option>
+                <option name="2" value="2">2</option>
+                <option name="3" value="3">3</option>
+                <option name="4" value="4">4</option>
+            </select>
+            <lable class="textlable">Phone:* </lable><input type="text" id="phone" class="textbox" autofocus required/>
+        </fieldset>
+        </div><br><br>
+        <p class="ptag col-sm-12">*Setting a password will allow you to log back in and see our documents any time.</p>
+    </div>
+    <div class="breakline"></div>
+    <div class="row">
+    <div class="second_part col-sm-12">
+    <h3>PRIMARY service or product of Interest:* </h3>
+        <select id="service" class="form-control" required>
+            <option value="">--Select one</option>
+            <option name="1" value="1">1</option>
+            <option name="2" value="2">2</option>
+            <option name="3" value="3">3</option>
+            <option name="4" value="4">4</option>
+        </select><br>
+        <h3>OTHER service or product of Interest:</h3>
+        <span class="checkvalue checkbox col-sm-12"><input type="checkbox" class="online" name="serorprod" value="Online Strategy">Online Strategy<br></span>
+        <span class="checkvalue checkbox col-sm-12"><input type="checkbox" class="web" name="serorprod" value="Web Design and Development">Web Design and Development <br></span>
+        <span class="checkvalue checkbox col-sm-12"><input type="checkbox" class="social" name="serorprod" value="Social Networking and Online Community">Social Networking and Online Community<br></span>
+        <span class="checkvalue checkbox col-sm-12"><input type="checkbox" class="integrated" name="serorprod" value="Integrated Online Campaigns">Integrated Online Campaigns<br></span>
+        <span class="checkvalue checkbox col-sm-12"><input type="checkbox" class="emailmarketing" name="serorprod" value="Email Marketing Services">Email Marketing Services(Strategy,Design,Development)<br></span>
+        <span class="checkvalue checkbox col-sm-12"><input type="checkbox" class="email" name="serorprod" value="Email Marketing Software">Email Marketing Software<br></span>
+    </div>
+    </div>
+    <div class="breakline"></div>
+    <div class="row">
+    <div class="second_part col-sm-12">
+    <h3>When are you looking to Implement a solution?*</h3>
+        <select id="looking" class="form-control" required>
+            <option value="">--Select one</option>
+            <option name="1" value="1">1</option>
+            <option name="2" value="2">2</option>
+            <option name="3" value="3">3</option>
+            <option name="4" value="4">4</option>
+        </select>
+    </div>
+        </div>
+    <div class="breakline"></div>
+    <div class="row">
+    <div class="second_part col-sm-12">
+    <h3>Yes! Subscribe to our News Letters</h3>
+        <input class="checkbox" id="field_terms" type="checkbox" required VALUE="YES">
+        <span class="greenorred ">Receive feature and best practice articles on email marketing.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspInteractive design and online strategy<br></span>
+        <br>
+        <input class="submitbutton btn btn-success" type="submit" onclick="addForm()" value="Save">
+
+    </div>
+        </div>
+</form>
+
+<div id="carlistholder" class="form">
+    <h3>Your submission record will be stored here..!!</h3>
+
+    <ol id="formlist"></ol>
+</div>
+</div>
+    </div>
+</body>
+</html>

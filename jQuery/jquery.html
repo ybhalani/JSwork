@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Examples</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+
+</head>
+<body>
+<script>
+      var obj ={"a": 1, "b" : 3};
+      var arr = [];
+      for (var i in obj) {
+          if (obj.hasOwnProperty(i)) {
+              arr.push('"field":'+ i + ',"fieldstatus:"' + obj[i] + ',' );
+          }
+      };
+      var jsonArray = JSON.stringify(arr);
+      console.log(jsonArray);
+</script>
+
+</body>
+</html>

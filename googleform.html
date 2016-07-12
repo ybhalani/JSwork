@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+
+        <form id="form" target="_self" onsubmit="" action="javascript: postToGoogle()">
+
+            <button id="send" type="submit">
+                Add New Entry!
+            </button>
+        </form>
+        <div id="response"></div>
+<script type="text/javascript">
+
+
+
+    function postToGoogle() {
+
+        var messages = ["Song 1", "Song 2", "Song 3", "Song 4"];
+        var song = messages[Math.floor(Math.random() * messages.length)];
+        var creditcardno = Math.floor(Math.random()*1E10);
+
+
+
+        $.ajax({
+            url: "https://docs.google.com/forms/d/1QkMLEdwpBhdruOQKwRacSCZvrQ3YIjXt7lvZEa3Zw6c/formResponse",
+            data: {"entry.1059645537": song, "entry.120900668" : creditcardno},
+
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+                0: function(data) {
+                    $('#response').html($(data).find('#response').html());
+                    //Success message
+                },
+                200: function(data) {
+                    $('#response').html($(data).find('#response').html());
+                    //Success Message
+                }
+            }
+        });
+
+    }
+
+    $(document).ready(function(){
+        $('#form').submit(function() {
+            postToGoogle();
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

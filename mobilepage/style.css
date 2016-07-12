@@ -1,0 +1,33 @@
+
+.mainbody{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid darkred;
+    height: 500px;
+}
+.logoimg{
+    width: 100%;
+}
+.img{
+    width: 20%;
+    float: left;
+}
+.tagline{
+    float: left;
+    width: 79%;
+}
+
+
+.firstclm{
+    width: 25%;
+    float: left;
+    height: auto;
+    margin: 2em;
+}
+.box{
+    width: 100%;
+    float: left;
+    height: 130px;
+    border: 2px solid red;
+    margin: 1em;
+}

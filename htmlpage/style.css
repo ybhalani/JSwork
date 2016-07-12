@@ -1,0 +1,133 @@
+{ margin: 0 auto;}
+
+
+body {
+    background:white;
+    margin: 0 auto;
+    font-family:georgia, times,serif;
+    height:2000px;
+}
+
+#header {
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:#666;
+    height:70px;
+    width:100%;
+}
+
+#nav {
+    margin-left:50px;
+    margin-top:45px;
+    word-spacing:20px;
+}
+
+#page1 {
+    height:1100px;
+    width:100%;
+    background:#afc9ff;
+    padding-top:110px;
+}
+
+#page2 {
+    height:1100px;
+    width:100%;
+    background:#777cdc;
+    padding-top:150px;
+
+}
+
+#page3 {
+    height:1100px;
+    width:100%;
+    background:#9b70c0;
+    padding-top:150px;
+}
+
+.page-padding {height:90px; width:100%;}
+
+a { color:white; text-decoration:none;}
+
+a:hover { text-decoration:underline;}
+.mainbig{
+    width: 100%;
+    height: 700px;
+    background: #846155 url("bg.jpg") no-repeat right top;
+    background-size: 100%;
+}
+.content{
+    margin: 0 auto;
+    width: 90%;
+}
+.firstclm {
+    width: 30%;
+    float: left;
+    margin: 1em;
+}
+.secondclm{
+    width: 30%;
+    float: left;
+    margin: 1em;
+}
+.thirdclm{
+    width: 30%;
+
+    margin: 1em;
+    float: left;
+}
+.thirdfirst{
+    height: 623px;
+    width: 100%;
+    float: left;
+    border: 5px solid red;
+    margin: 7px;
+    background-color: #ffffff;
+    opacity: 0.6;
+
+}
+.firstfirst{
+    height: 300px;
+    width: 100%;
+    float: left;
+    border: 5px solid red;
+    margin: 7px;
+    background-color: #ffffff;
+    opacity: 0.6;
+
+}
+.firstsecond{
+    height: 300px;
+    width: 100%;
+    float: left;
+    border: 5px solid red;
+    margin: 7px;
+    background-color: #ffffff;
+    opacity: 0.6;
+
+}
+
+
+.secondfirst{
+    height: 450px;
+    width: 100%;
+    float: left;
+    border: 5px solid red;
+    margin: 7px;
+    background-color: #ffffff;
+    opacity: 0.6;
+
+}
+.secondsecond{
+    height: 150px;
+    width: 100%;
+    float: left;
+    border: 5px solid red;
+    margin: 7px;
+    background-color: #ffffff;
+    opacity: 0.6;
+
+}
+.clearboth{
+    clear: both;
+}

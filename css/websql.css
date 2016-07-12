@@ -1,0 +1,87 @@
+body{
+    background: #ffffff url("../images/bg.jpg") repeat-y right top;
+    color: #f9f9f9;
+    margin: 2em;
+}
+.form{
+    width: 80%;
+    margin: 0 7%;
+}
+.lf{
+    width: 47%;
+    border: none;
+    outline: 2px groove threedface;
+    float: left;
+    height: auto;
+}
+.rf{
+    width: 47%;
+    border: none;
+    outline: 2px groove threedface;
+    float: right;
+    height: auto;
+}
+
+.textlable{
+    float: left;
+    width: 50%;
+}
+.textbox {
+    margin: 0em 0 1em 1em;
+}
+#position{
+    margin: 0em 0 1em 1em;
+    width: 29.5%;
+}
+#service{
+    width:14.5%;
+}
+#looking{
+    width:14.5%;
+}
+.ptag{
+    clear: both;
+    padding: 1em;
+}
+.checkvalue{
+    height: 28px;
+    display: block;
+}
+.breakline{
+    background: #ffffff url("../images/brk.png") repeat-x right top;
+    margin: 1em 0;
+    height: 5px;
+}
+.icon{
+    background: #ffffff url("../images/icon.png") no-repeat right top;
+    height: 277px;
+    width: 300px;
+}
+
+#formlist span h4 {
+    display: inline;
+}
+.deletebtn{
+    float: right;
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #ff0000;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.submitbutton{
+    display: block;
+    width: 165px;
+    height: 42px;
+    background: #ffff00;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Examples</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+
+</head>
+<body>
+<script>
+    var string = "yash is good boy yash is bad boy yash is nice boy";
+    var arr = string.split(" ");
+    var obj = { };
+    for (var i = 0, j = arr.length; i < j; i++) {
+        if (obj[arr[i]]) {
+            obj[arr[i]]++;
+        }
+        else {
+            obj[arr[i]] = 1;
+        }
+    }
+    function sortArgs() {
+        var args = Array.prototype.slice.call(arguments);
+        return args.sort();
+    }
+
+
+
+    function sortArgs() {
+        var args = Array.prototype.slice.call(arguments);
+        return args.sort();
+    }
+
+    function myFunction(){
+        var args = Array.prototype.slice.call(arguments);
+        document.write(args.filter(checkNumber));
+    }
+
+    function checkNumber(n) {
+        return n >= 3 && n<=5;
+    }
+    console.log(obj);
+    myFunction(1,2,3,4,5,6,7,8,9, 11, 12, 114, 4,5,6,54,3,5,10);
+
+
+</script>
+
+</body>
+</html>

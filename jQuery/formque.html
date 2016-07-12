@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<form>
+    <form>\n  <input type="radio" id="type_person" name="type" value="person" checked/>\n  <input type="radio" id="type_company" name="type" value="company"/>\n  <input type="text" id="first_name" name="first_name" value="John"/>\n  <input type="text" id="last_name" name="last_name" value="Doe"/>\n  <input type="text" id="email" name="email" value="john@example.com"/>\n  <input type="text" id="company_name" name="company_name" value=""/>\n  <input type="text" id="phone" name="phone" value="234-567-890"/>\n</form>
+</form>
+<script>
+    function solution() {
+         var type = $('[name=type]:checked').val(),
+                fName = $('[name=first_name]').val(),
+                lName = $('[name=last_name]').val(),
+                email = $('[name=email]').val(),
+                companyName = $('[name=company_name]').val(),
+                phone = $('[name=phone]').val();
+
+        var EMAIL_REGEX = /^[A-Za-z0-9.]{1,64}@[A-Za-z0-9.]{1,64}$/,
+                PHONE_REGEX = /^\d{3}-\d{3}-\d{4}$/;
+
+        var result = false;
+        if (type == 'person' && fName && lName && EMAIL_REGEX.test(email)) {
+            result = true;
+        } else if (type == 'company' && companyName && PHONE_REGEX.test(phone)) {
+            result = true;
+        }
+        console.log(result ? 'True' : 'False');
+    }
+
+    var str="00-44    48  5555 8361";
+    var newStr = str.replace(/[\. ,:-]+/g, '');
+    var result1= newStr.match(/\d{3}(?=\d{2,3})|\d+/g).join("-");
+    console.log(newStr);
+    console.log(result1);
+    //$('[type=radio]').on('click', solution);
+</script>
+</body>
+</html>

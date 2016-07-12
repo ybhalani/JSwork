@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Exam Answer</title>
+</head>
+<body>
+<div style=" margin: 0 5%; width: 90%;color: red; text-align: center; font-size: 2em;"><p>Click button to display messages</p>
+<button type="button" onclick="main()" style="font-size: 1.1em;">Button</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+</div>
+    <script>
+        function Triangle(base1,height1) {
+                /////////////////////////
+                // Helping function
+                /////////////////////////
+                var trace = function (str) {
+                    alert(str);
+                }
+
+                /////////////////////////
+                // Manpagesr function
+                /////////////////////////
+                // Cortructor
+                var base = base1;
+                var height = height1;
+
+                console.log("Height inside function:    " +height);
+                /////////////////////////
+                // Access function
+                /////////////////////////
+                this.getBasea = function () {
+                    return (base);
+                }
+                this.setBase = function (base1) {
+                    base = base1;
+                }
+            console.log("Base inside function:    " +base);
+                this.getHeight = function () {
+                    return (height);
+                }
+                this.setHeight = function (height1) {
+                    height = height1;
+                }
+                this.isTall = function () {
+                    // trace("Call function isExpensive()");
+                    return height1 > 100;
+                }
+
+                /////////////////////////
+                // Implementor function
+                /////////////////////////
+                this.area=function(){
+                    return ((base*height)/2);
+                }
+            }
+
+
+            function main(){
+                pyramid =new Triangle(60,120);
+                    console.log("area of the Pyramid:   " +pyramid.area());
+                    console.log("Is Pyramid Tall?   " +pyramid.isTall());
+                document.getElementById("demo").innerHTML=("area is:   "+pyramid.area());
+                if(pyramid.isTall())
+                    document.getElementById("demo1").innerHTML=("A pyramid is tall");
+                else
+                    document.getElementById("demo2").innerHTML=("A pyramid is not tall");
+
+            }
+</script>
+
+
+</body>
+</html>

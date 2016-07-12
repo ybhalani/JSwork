@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="survey.js"></script>
+    <link rel="stylesheet" type="text/css" href="survey.css">
+</head>
+<body>
+<h1>WebSQL Answer</h1>
+
+<div id="controls">
+    <p>Add a Survey to the database</p>
+    <form action="test.php">
+    <label>Color:</label>
+    <input type="color" id="carmake" value="#ff00ff"  style="margin: 20px;" />
+    <br />
+    <label>Number:</label>
+    <input type="number" id="carmodel" min="0" max="130"  style="margin: 4px;" />
+    <br />
+        <input type="submit" id="addcar" onclick="addCar();" style="margin: 11px 0 0 57px;" value="SAVE">
+    </form>
+</div>
+<div id="carlistholder">
+    <h3>Your Survay</h3>
+
+    <ul id="carlist"></ul>
+</div>
+
+</body>
+</html>
